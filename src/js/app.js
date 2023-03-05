@@ -1,5 +1,6 @@
-import GamePlay from './gamePlay';
+import { validateCardFormWidget } from "./widget";
 
-const play = new GamePlay();
-play.init();
-setInterval(() => play.redrawPosition(), 1500);
+const container = document.querySelector(".container");
+const form = new validateCardFormWidget(container);
+
+form.bindToDOM();

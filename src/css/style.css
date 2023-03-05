@@ -1,59 +1,39 @@
-:root {
-    --cell-size: 120px;
-  }
-  
-  html, body {
-    height: 100%;
-    margin: 0;
-  }
-  
-  body {
-    background: #faaa00;
-    font-size: 16px;
-  }
-   
-  .board-container {
+.cards {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+.card {
+    list-style-type: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #000000;
+    width: 64px;
+    height: 40px;
+}
+
+.visa {
+    background-image: url("../img/visa.png");
+}
   
-  .board {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-column-gap: 2px;
-    grid-row-gap: 2px;
-  }
-  
-  .cell {
-    background: #ffeeff;
-    position: relative;
-  }
-  
-  .map-tile {
-    width: var(--cell-size);
-    height: var(--cell-size);
-  }
-  
-   .character {
-    width: var(--cell-size);
-    height: var(--cell-size);
-    position: absolute;
-    background-image: url('../img/goblin.png');
-    z-index: 99;
-  }
-  
-   @keyframes fade {
-    from {
-      opacity: 0;
-      top: calc(var(--cell-size) * 0.5);
-      font-size: 1rem;
-    }
-    to {
-      opacity: 1;
-      top: -20px;
-      font-size: 1.5rem;
-    }
-  }
-  
+.masterCard {
+    background-image: url("../img/masterCard.png");
+}
+
+.mir {
+    background-image: url("../img/mir.png");
+}
+
+.discover {
+    background-image: url("../img/discover.png");
+}
+
+.americanExpress {
+    background-image: url("../img/americanExpress.png");
+}
+
+.text {
+    color:crimson;
+}
