@@ -1,6 +1,22 @@
-import { validateCardFormWidget } from "./widget";
+import { Popover } from "./popover";
 
-const container = document.querySelector(".container");
-const form = new validateCardFormWidget(container);
+const btn = document.querySelector(".btn");
+let element = undefined;
+let active = false;
 
-form.bindToDOM();
+const popover = new Popover();
+
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
+  if (active) {
+    active = false;
+    popover.removePopover(element);
+  } else {
+    element = popover.showPopover(
+      "Popover title",
+      "And here's some amazing content.",
+      btn
+    );
+    active = true;
+  }
+});

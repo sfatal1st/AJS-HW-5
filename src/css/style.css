@@ -1,39 +1,23 @@
-.cards {
+.btn {
+    padding: 10px;
+    margin: 80px;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: flex-start;
+    position: relative;
+    background: #f00;
+    color: #fff;
 }
 
-.card {
-    list-style-type: none;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-    background-color: #000000;
-    width: 64px;
-    height: 40px;
+.popoverTitle {
+    position: absolute;
+    padding: 1px;
+    width: 200px;
+    background: #ccc;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1);
+    z-index: 999;
 }
 
-.visa {
-    background-image: url("../img/visa.png");
-}
-  
-.masterCard {
-    background-image: url("../img/masterCard.png");
-}
-
-.mir {
-    background-image: url("../img/mir.png");
-}
-
-.discover {
-    background-image: url("../img/discover.png");
-}
-
-.americanExpress {
-    background-image: url("../img/americanExpress.png");
-}
-
-.text {
-    color:crimson;
+.popoverMessage {
+    background: #fff;
 }
